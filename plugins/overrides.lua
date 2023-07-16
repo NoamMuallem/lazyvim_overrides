@@ -35,22 +35,6 @@ return {
     enabled = false,
   },
   {
-    "TimUntersberger/neogit",
-    event = "VeryLazy",
-    config = function()
-      require("neogit").setup({
-        kind = "tab",
-        signs = {
-          -- { CLOSED, OPENED }
-          section = { "", "" },
-          item = { "", "" },
-          hunk = { "", "" },
-        },
-        integrations = { diffview = true },
-      })
-    end,
-  },
-  {
     "andymass/vim-matchup",
     event = "CursorMoved",
   },
@@ -233,9 +217,15 @@ return {
       }
     end,
   },
+  {
+    {
+      "folke/zen-mode.nvim",
+    },
+  },
   { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
   { "nyoom-engineering/oxocarbon.nvim" },
   { "rebelot/kanagawa.nvim" },
   { "Shatur/neovim-ayu" },
   { "EdenEast/nightfox.nvim" },
+  { "navarasu/onedark.nvim" },
 }
