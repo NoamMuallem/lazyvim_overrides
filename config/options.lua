@@ -16,5 +16,4 @@ vim.opt.confirm = true
 vim.opt.spelllang = "en_us"
 vim.opt.spell = true
 vim.o.showcmdloc = "statusline"
-vim.o.winbar = "%{%v:lua.require'nvim-navic'.get_location()%}"
 vim.opt.swapfile = false

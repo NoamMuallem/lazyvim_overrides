@@ -155,11 +155,15 @@ return {
     end,
   },
   {
+    "SmiteshP/nvim-navic",
+    event = "VeryLazy",
+  },
+  {
     "nvim-lualine/lualine.nvim",
     event = "VeryLazy",
     opts = function()
       local icons = require("lazyvim.config").icons
-      local Util = require("lazyvim.util")
+      local Util = require("lazyvim.util").ui
 
       return {
         options = {
@@ -191,8 +195,8 @@ return {
             { "filename", path = 1, symbols = { modified = "  ", readonly = "", unnamed = "" } },
           -- stylua: ignore
           {
-            function() return require("nvim-navic").get_location() end,
-            cond = function() return package.loaded["nvim-navic"] and require("nvim-navic").is_available() end,
+            function() return require("editor.navic").get_location() end,
+            cond = function() return package.loaded["editor.navic"] and require("editor.navic").is_available() end,
           },
           },
           lualine_x = {
