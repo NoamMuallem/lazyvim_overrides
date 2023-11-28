@@ -226,11 +226,12 @@ return {
       "folke/zen-mode.nvim",
     },
   },
+  { "f-person/git-blame.nvim" },
+  -- color schemes
   { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
   { "nyoom-engineering/oxocarbon.nvim" },
   { "rebelot/kanagawa.nvim" },
   { "Shatur/neovim-ayu" },
   { "EdenEast/nightfox.nvim" },
   { "navarasu/onedark.nvim" },
-  { "f-person/git-blame.nvim" },
 }
