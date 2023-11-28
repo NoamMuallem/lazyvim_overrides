@@ -69,6 +69,10 @@ vim.keymap.set("n", "gt", "<cmd>tabnext<cr>", { desc = "Next Tab" })
 vim.keymap.set("n", "Gt", "<cmd>tabprevious<cr>", { desc = "Previous Tab" })
 vim.keymap.set("n", "<leader>N", "<cmd>tabclose<cr>", { desc = "Close Tab" })
 
+-- lsp
+map("n", "cd", vim.diagnostic.open_float, { desc = "Line Diagnostics" })
+map("n", "ca", vim.lsp.buf.code_action, { desc = "Move up" })
+
 -- zenMode
 vim.keymap.set("n", "<leader>z", "<cmd>ZenMode<cr>", { desc = "ZenMode" })
 
