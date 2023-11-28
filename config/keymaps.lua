@@ -40,7 +40,7 @@ vim.keymap.set("n", "<Leader>p", '"0p')
 vim.keymap.set("n", "<Leader>P", '"0P')
 
 -- copy to os clipboard
-vim.keymap.set("v", "<Leader>y", '"*y')
+vim.keymap.set("n", "<Leader>y", '"*y')
 
 -- insert new line without going into insert mode
 vim.keymap.set("n", "<Leader>k", ":<c-u>put!=repeat([''],v:count)<bar>']+1<cr>")
@@ -51,6 +51,9 @@ vim.keymap.set("n", "m", ";")
 vim.keymap.set("n", "M", ",")
 vim.keymap.set("v", "m", ";")
 vim.keymap.set("v", "M", ",")
+
+-- set markers to z
+vim.keymap.set("n", "z", "m")
 
 -- free s mapping
 vim.keymap.set("n", "s", "s")
@@ -69,8 +72,9 @@ vim.keymap.set("n", "gt", "<cmd>tabnext<cr>", { desc = "Next Tab" })
 vim.keymap.set("n", "Gt", "<cmd>tabprevious<cr>", { desc = "Previous Tab" })
 vim.keymap.set("n", "<leader>N", "<cmd>tabclose<cr>", { desc = "Close Tab" })
 
--- zenMode
-vim.keymap.set("n", "<leader>z", "<cmd>ZenMode<cr>", { desc = "ZenMode" })
+-- lsp
+map("n", "cd", vim.diagnostic.open_float, { desc = "Line Diagnostics" })
+map("n", "ca", vim.lsp.buf.code_action, { desc = "Move up" })
 
 -- smart resizing splits
 local change_width = function(d)
