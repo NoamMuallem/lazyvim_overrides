@@ -76,6 +76,9 @@ vim.keymap.set("n", "<leader>N", "<cmd>tabclose<cr>", { desc = "Close Tab" })
 map("n", "cd", vim.diagnostic.open_float, { desc = "Line Diagnostics" })
 map("n", "ca", vim.lsp.buf.code_action, { desc = "Move up" })
 
+-- zenMode
+vim.keymap.set("n", "<leader>z", "<cmd>ZenMode<cr>", { desc = "ZenMode" })
+
 -- smart resizing splits
 local change_width = function(d)
   local v = vim.api

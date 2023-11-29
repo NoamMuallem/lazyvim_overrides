@@ -12,7 +12,7 @@ return {
       servers = { eslint = {} },
       setup = {
         eslint = function()
-          require("lazyvim.util").on_attach(function(client)
+          require("lazyvim.util").lsp.on_attach(function(client)
             if client.name == "eslint" then
               client.server_capabilities.documentFormattingProvider = true
             elseif client.name == "tsserver" then
@@ -155,11 +155,15 @@ return {
     end,
   },
   {
+    "SmiteshP/nvim-navic",
+    event = "VeryLazy",
+  },
+  {
     "nvim-lualine/lualine.nvim",
     event = "VeryLazy",
     opts = function()
       local icons = require("lazyvim.config").icons
-      local Util = require("lazyvim.util")
+      local Util = require("lazyvim.util").ui
 
       return {
         options = {
@@ -191,8 +195,8 @@ return {
             { "filename", path = 1, symbols = { modified = "  ", readonly = "", unnamed = "" } },
           -- stylua: ignore
           {
-            function() return require("nvim-navic").get_location() end,
-            cond = function() return package.loaded["nvim-navic"] and require("nvim-navic").is_available() end,
+            function() return require("editor.navic").get_location() end,
+            cond = function() return package.loaded["editor.navic"] and require("editor.navic").is_available() end,
           },
           },
           lualine_x = {
@@ -222,11 +226,12 @@ return {
       "folke/zen-mode.nvim",
     },
   },
+  { "f-person/git-blame.nvim" },
+  -- color schemes
   { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
   { "nyoom-engineering/oxocarbon.nvim" },
   { "rebelot/kanagawa.nvim" },
   { "Shatur/neovim-ayu" },
   { "EdenEast/nightfox.nvim" },
   { "navarasu/onedark.nvim" },
-  { "f-person/git-blame.nvim" },
 }
