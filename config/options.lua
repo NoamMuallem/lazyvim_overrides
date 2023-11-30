@@ -13,7 +13,5 @@ vim.opt.cmdheight = 0
 vim.opt.confirm = true
 vim.opt.clipboard = nil
 vim.opt.confirm = true
-vim.opt.spelllang = "en_us"
-vim.opt.spell = true
 vim.o.showcmdloc = "statusline"
 vim.opt.swapfile = false
