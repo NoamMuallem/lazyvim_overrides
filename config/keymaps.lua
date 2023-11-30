@@ -40,7 +40,7 @@ vim.keymap.set("n", "<Leader>p", '"0p')
 vim.keymap.set("n", "<Leader>P", '"0P')
 
 -- copy to os clipboard
-vim.keymap.set("n", "<Leader>y", '"*y')
+vim.keymap.set("v", "<Leader>y", '"*y')
 
 -- insert new line without going into insert mode
 vim.keymap.set("n", "<Leader>k", ":<c-u>put!=repeat([''],v:count)<bar>']+1<cr>")
