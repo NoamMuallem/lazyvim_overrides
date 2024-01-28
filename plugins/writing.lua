@@ -1,7 +1,7 @@
 -- for spell checking, source: https://github.com/kamykn/spelunker.vim
 vim.g.enable_spelunker_vim = 1
 vim.g.enable_spelunker_vim_on_readonly = 1
-vim.g.spelunker_target_min_char_len = 4
+vim.g.spelunker_target_min_char_len = 2
 vim.g.spelunker_max_suggest_words = 15
 vim.g.spelunker_max_hi_words_each_buf = 100
 vim.g.spelunker_check_type = 1
@@ -47,4 +47,6 @@ return {
   {
     "kamykn/spelunker.vim",
   },
+  --folding
+  { "kevinhwang91/nvim-ufo", requires = "kevinhwang91/promise-async" },
 }
